@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[7.2]
       t.string :email
       t.string :password_digest
       t.string :city
-      t.string :county
+      t.string :country  # Updated from county to country
       t.date :date_of_birth
 
       t.timestamps
