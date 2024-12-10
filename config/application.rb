@@ -20,8 +20,7 @@ Bundler.require(*Rails.groups)
 
 module GlobalNetworkWebsite
   class Application < Rails::Application
-
-        # Initialize configuration defaults for originally generated Rails version.
+    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
@@ -41,6 +40,5 @@ module GlobalNetworkWebsite
     config.generators.system_tests = nil
 
     # Must add these lines!
-    
   end
 end

@@ -12,7 +12,7 @@ class RegistrationsController < ApplicationController
       render json: { status: 422, errors: user.errors.full_messages }
     end
   end
-  
+
   private
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :city, :country, :date_of_birth)
