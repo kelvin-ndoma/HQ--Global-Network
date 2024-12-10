@@ -1,11 +1,12 @@
-Rails.application.config.middleware.insert_before 0, Rack::Cors do
-    allow do
-      origins 'http://127.0.0.1:5174'
+# config/initializers/cors.rb
 
-      resource '*', 
-        headers: :any, 
-        methods: [:get, :post, :put, :patch, :delete, :options, :head, :options],
-        credentials: true
-    end
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'http://127.0.0.1:5174'  # Frontend URL
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      credentials: true
   end
-  
+end
